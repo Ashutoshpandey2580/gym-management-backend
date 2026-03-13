@@ -84,7 +84,7 @@ DELETE /members/{id}
 
 ---
 
-## API Screenshots
+## API screenshots
 
 ### Create Member API
 ![Create Member](screenshots/create-member-api.png)
