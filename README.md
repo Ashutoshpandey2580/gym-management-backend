@@ -103,3 +103,22 @@ DELETE /members/{id}
 
 ### Database Table
 ![Database](database-table.png.png)
+
+
+## Project Architecture
+Client
+ ↓
+Controller Layer
+ ↓
+Service Layer
+ ↓
+Repository Layer
+ ↓
+MySQL Database
+
+
+## Future Improvements
+JWT Authentication
+Caching
+Docker
+Microservices
