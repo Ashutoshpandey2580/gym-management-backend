@@ -84,22 +84,22 @@ DELETE /members/{id}
 
 ---
 
-## API screenshots
+## API Screenshots
 
 ### Create Member API
-![Create Member](screenshots/create-member-api.png)
+![Create Member](create-member-api.png.png)
 
 ### Get Member By ID
-![Get Member](screenshots/get-member-api.png)
+![Get Member](get-member-api.png.png)
 
 ### Pagination API
-![Pagination](screenshots/pagination-api.png)
+![Pagination](pagination-api.png.png)
 
 ### Update Member API
-![Update Member](screenshots/update-member-api.png)
+![Update Member](update-member-api.png.png)
 
 ### Delete Member API
-![Delete Member](screenshots/delete-member-api.png)
+![Delete Member](delete-member-api.png.png)
 
 ### Database Table
-![Database](screenshots/database-table.png)
+![Database](database-table.png.png)
