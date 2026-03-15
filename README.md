@@ -1,46 +1,65 @@
 # Gym Management Backend System
 
-A RESTful backend system built using Java and Spring Boot to manage gym members, trainers, and subscriptions.  
-This project demonstrates backend architecture used in real-world startup applications.
+A **RESTful backend system** built using Java and Spring Boot to manage gym members.
+This project demonstrates backend architecture used in real-world applications including API design, database integration, security, and documentation.
 
 ---
 
 ## Tech Stack
 
-- Java 17
-- Spring Boot
-- Spring Data JPA
-- MySQL
-- Spring Security
-- Maven
-- REST APIs
+* Java 17
+* Spring Boot
+* Spring Data JPA
+* MySQL
+* Spring Security
+* Swagger (OpenAPI)
+* Maven
+* REST APIs
 
 ---
 
-## Architecture
+## Backend Architecture
 
-The project follows **Layered Architecture** used in modern backend systems.
+The project follows a **Layered Architecture** commonly used in production backend systems.
 
-Controller Layer → Handles API requests  
-Service Layer → Business logic  
-Repository Layer → Database operations  
+Client
+↓
+Controller Layer (Handles API Requests)
+↓
+Service Layer (Business Logic)
+↓
+Repository Layer (Database Access)
+↓
+MySQL Database
 
-This structure helps maintain **clean, scalable, and maintainable code**.
+This architecture helps maintain **clean, scalable, and maintainable code**.
 
 ---
 
 ## Features
 
-- CRUD APIs for Gym Members
-- Pagination support for scalable APIs
-- Search APIs
-- MySQL database integration
-- Layered backend architecture
-- RESTful API design
-- Exception handling
-- Basic authentication using Spring Security
+* CRUD APIs for Gym Members
+* Pagination support for scalable APIs
+* RESTful API design
+* MySQL database integration
+* Layered backend architecture
+* Global exception handling
+* API documentation using Swagger
+* Basic authentication using Spring Security
 
 ---
+
+## Project Structure
+
+src/main/java/com/ashutosh/gymbackend
+
+controller → REST API endpoints  
+service → Business logic  
+repository → Database access  
+entity → JPA entities  
+dto → Data transfer objects  
+exception → Global exception handling  
+config → Security and Swagger configuration
 
 ## API Endpoints
 
@@ -52,21 +71,21 @@ Example Request
 
 ```
 {
-"name": "Ashutosh",
-"email": "ashu@gmail.com",
-"phone": "9876543210"
+  "name": "Ashutosh",
+  "email": "ashu@gmail.com",
+  "phone": "9876543210"
 }
 ```
 
 ---
 
-### Get Member by ID
+### Get Member By ID
 
 GET /members/{id}
 
 ---
 
-### Get Members with Pagination
+### Get Members With Pagination
 
 GET /members?page=0&size=5
 
@@ -84,41 +103,88 @@ DELETE /members/{id}
 
 ---
 
+## API Documentation (Swagger)
+
+Swagger UI is integrated for interactive API documentation and testing.
+
+Open in browser after running the application:
+
+http://localhost:8080/swagger-ui/index.html
+
+---
+
 ## API Screenshots
 
+### Swagger Authentication
+
+![Authorization](screenshots/authorization.png)
+
+### Swagger UI
+
+![Swagger UI](screenshots/swagger-ui.png)
+
 ### Create Member API
-![Create Member](create-member-api.png.png)
+
+![Create Member](screenshots/create-member-api.png)
 
 ### Get Member By ID
-![Get Member](get-member-api.png.png)
+
+![Get Member](screenshots/get-member-api.png)
 
 ### Pagination API
-![Pagination](pagination-api.png.png)
+
+![Pagination](screenshots/pagination-api.png)
 
 ### Update Member API
-![Update Member](update-member-api.png.png)
+
+![Update Member](screenshots/update-member-api.png)
 
 ### Delete Member API
-![Delete Member](delete-member-api.png.png)
+
+![Delete Member](screenshots/delete-member-api.png)
 
 ### Database Table
-![Database](database-table.png.png)
 
+![Database](screenshots/database-table.png)
 
-## Project Architecture
-Client
- ↓
-Controller Layer
- ↓
-Service Layer
- ↓
-Repository Layer
- ↓
-MySQL Database
+---
 
+## Running the Project Locally
+
+1. Clone the repository
+
+```
+git clone https://github.com/Ashutoshpandey2580/gym-management-backend.git
+```
+
+2. Open the project in IntelliJ IDEA or any Java IDE.
+
+3. Configure MySQL database in `application.properties`.
+
+4. Run the application
+
+```
+GymBackendApplication.java
+```
+
+5. Access Swagger UI
+
+```
+http://localhost:8080/swagger-ui/index.html
+```
+
+---
 
 ## Future Improvements
-JWT Authentication
-Caching
-Docker
-Microservices
+
+- JWT Authentication
+- Unit Testing using Mockito
+- Docker Containerization
+- Microservices Architecture
+
+---
+
+## Author
+
+Ashutosh Pandey
+Backend Developer | Java | Spring Boot
