@@ -5,9 +5,13 @@ import com.ashutosh.gymbackend.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.querydsl.QPageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Scanner;
 
 @Service
 public class MemberService {
@@ -46,9 +50,27 @@ public class MemberService {
         memberRepository.deleteById(id);
 
     }
-    public Page<Member> getMembers(int page, int size){
-        return memberRepository.findAll(PageRequest.of(page,size));
-    }
+   public Page<Member> getMember(
+           int page,
+           int size,
+           String sortBy
+   ){
+       Pageable pageable= PageRequest.of(
+               page,
+               size,
 
+               Sort.by(sortBy)
+       );
+
+
+       return memberRepository.findAll(pageable);
 
 }
+public  List<Member> searchMember(
+        String name
+
+){
+      return memberRepository
+              .findByNameContaining(name);
+
+}}

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/members")
 public class MemberController {
@@ -26,9 +28,23 @@ public class MemberController {
     @GetMapping
     public Page<Member> getMembers(
             @RequestParam int page,
-            @RequestParam int size){
-        return memberService.getMembers(page,size);
+            @RequestParam int size,
+            @RequestParam String sortBy
+    ){
+        return memberService.getMember(
+                page,
+                size,
+                sortBy
+        );
     }
+    @GetMapping("/search")
+    public List<Member> searchMember(
+            @RequestParam String name
+    ){
+        return memberService
+                .searchMember(name);
+    }
+
 
     @PutMapping("/{id}")
     public Member updateMember(@PathVariable Long id,@RequestBody Member member){
