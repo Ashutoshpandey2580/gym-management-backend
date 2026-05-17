@@ -118,7 +118,7 @@ DELETE /members/{id}
 ![Sorting API](screenshots/Sorting API.png)
 
 ## Swagger UI Schema
-![Swagger UI Schema](screenshots/Swagger UI schema.png)
+![Swagger UI Schema](screenshots/Swagger UI Schema.png)
 
 ## Users
 ![Users](screenshots/Users.png)
