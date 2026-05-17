@@ -103,3 +103,22 @@ DELETE /members/{id}
 
 ### Database Table
 ![Database](database-table.png.png)
+
+
+## JWT Swagger UI
+![JWT Swagger UI](screenshots/JWT Swagger UI.png)
+
+## Login API
+![Login API](screenshots/Login API.png)
+
+## Search API
+![Search API](screenshots/Search API.png)
+
+## Sorting API
+![Sorting API](screenshots/Sorting API.png)
+
+## Swagger UI Schema
+![Swagger UI Schema](screenshots/Swagger UI schema.png)
+
+## Users
+![Users](screenshots/Users.png)
